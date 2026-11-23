@@ -71,8 +71,6 @@ Dashboard interaktif terdiri dari 3 halaman utama:
 2. **Product & Toko:** Analisis kontribusi region, *Gross Profit Margin %*, serta tabel *drill-down* performa toko dan SKU produk.
 3. **Pelanggan:** Pemetaan retensi 521 pelanggan, distribusi segmen & kelompok usia, metode pembayaran, efektivitas promo, dan rasio retur.
 
-*(Tambahkan screenshot dashboard Anda di folder `/assets` dan tampilkan di sini)*
-
 ---
 
 ## 🔗 Project Links & Contact
