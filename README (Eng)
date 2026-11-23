@@ -1,0 +1,86 @@
+Berikut adalah versi bahasa Inggris dari template `README.md` untuk repositori GitHub Anda (sudah disesuaikan dengan tautan file `.pbix`/PDF dan video *walkthrough*):
+
+```markdown
+# 📊 ElektroMax Retail Analytics: Diagnosing 2025 Sales Decline & Operational Leakage
+
+![Tools](https://img.shields.io/badge/Tools-SQL%20%7C%20Power%20BI-blue)
+![Focus](https://img.shields.io/badge/Focus-Retail%20Analytics%20%26%20BI-green)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+## 📌 Project Overview
+**ElektroMax** is an electronics retail company operating **10 branches** across **4 regions**[cite: 2, 4], generating a cumulative revenue of **Rp290.73 billion** with a **30.89% Gross Profit Margin (GPM)** across **56,728 transactions** (**73,649 units sold**)[cite: 1, 2, 3].
+
+Despite strong cumulative figures, **2025 sales performance contracted** compared to the previous year[cite: 4]. This project diagnoses the root causes behind the 2025 downturn using **SQL** and builds an interactive 3-page **Power BI** dashboard to monitor sales, branch disparities, customer retention, and operational return costs[cite: 1, 2, 3, 4].
+
+> **Disclaimer:** *The dataset used in this project is a synthetic dataset created for educational and data analytics portfolio purposes.*
+
+---
+
+## 🎯 Key Business Questions
+1. **Branch & Product Disparity:** Which branches and product categories experienced the sharpest Year-on-Year (YoY) contraction in 2025, and was it driven by lower unit volume or declining Average Selling Price (ASP)?[cite: 4]
+2. **Promotion Effectiveness:** Do promotional campaigns genuinely drive incremental sales, or do they merely erode gross profit margins?[cite: 4]
+3. **Customer Frequency Drop:** Why did customer purchase frequency decline sharply in 2025?[cite: 4]
+4. **Return & Logistics Leakage:** What patterns drive the ~10% return rate, and how much gross profit and logistics cost are lost as a result?[cite: 3, 4]
+5. **Customer Acquisition:** How does active customer retention compare against new customer acquisition across 2024–2025?[cite: 4]
+
+---
+
+## 🗂️ Data Architecture & Methodology
+The analysis is built on a **star-schema** data model comprising:
+- **Fact Table:** `fact_penjualan` (transaction records, quantity, unit price, discount, `total_neto`, `gross_profit`, `status_transaksi`)[cite: 4].
+- **Dimension Tables:** `dim_toko`, `dim_produk`, `dim_pelanggan`, `dim_promosi`, and `dim_waktu`[cite: 4].
+
+**Key Analytical Rules & Assumptions:**
+- Net revenue, margin, and purchasing behavior calculations exclude returned orders (`status_transaksi <> 'Retur'`)[cite: 4].
+- Promotional campaign performance is normalized per active day (`total_hari`) to ensure a fair comparison between short-term campaigns and organic baseline days[cite: 4].
+- Return logistics cost leakage is estimated using a flat assumption of **Rp50,000 per returned transaction**[cite: 4].
+
+---
+
+## 🔍 Key Analytical Findings
+
+### 1. Extreme YoY Branch Disparity & Customer Downtrading
+- **6 out of 10 branches** experienced revenue contraction in 2025, with YoY growth ranging from **+4.57%** (*Pondok Indah Mall*) to **-12.38%** (*Sun Plaza*).
+- The steepest declines occurred in two of 2024's largest revenue contributors: **ElektroMax Sun Plaza (-12.38%)** and **ElektroMax Mall of Indonesia (-9.05%)**.
+- Rather than a drop in foot traffic, the contraction was driven by **customer downtrading** (shifting toward lower-priced models)—such as Television ASP at Sun Plaza falling **11.6%** (Rp7.20M → Rp6.36M) and Refrigerator ASP at MOI dropping **8.7%** (Rp4.04M → Rp3.68M)—compounded by unit volume drops in **Sun Plaza AC (-18.0%)** and **MOI Washing Machines (-17.3%)**.
+
+### 2. Dominance of Organic Sales & Margin-Eroding Discounts
+- **67.20% of total revenue (Rp195.36 billion)** and **36,526 transactions** came from organic purchases **without promotions**[cite: 3, 44].
+- Out of 17 promotional schemes, meaningful revenue contribution came almost exclusively from **Flash Sale Weekend (16.24%; Rp47.23B)** and **Bundling AC + Installation (14.62%; Rp42.52B)**, while the remaining 15 seasonal campaigns contributed **<2% combined**[cite: 3, 44].
+- Increasing effective discounts in 2025 (from **~3.5% to ~5.0%**) failed to lift transaction volume and further compressed net ASP and margins[cite: 4].
+
+### 3. Zero New Customer Acquisition & Core Buyer Frequency Drop
+- Across 2024–2025, the active customer base stagnated at **521 customers** with **0 new customer acquisitions**, leaving revenue entirely dependent on existing buyers[cite: 3, 4].
+- Top repeat buyers from 2024 cut their purchase frequency by nearly **50%** in 2025 (e.g., Customer ID `#40` dropped from 51 to 28 transactions, resulting in a `-Rp147.4M` revenue loss)[cite: 4].
+
+### 4. Systemic 10.01% Return Rate Inflating Logistics Costs by Rp284M
+- A total of **5,681 returned transactions (10.01% return rate)** were recorded, with **54.1%** concentrated in core big-ticket categories: **AC (1,085)**, **Television (1,055)**, and **Refrigerator (936)**, alongside elevated returns in **Microwave (834)**[cite: 3].
+- Returns were evenly distributed across all 10 branches (**527–591 returns per store**), indicating a company-wide quality control and fulfillment issue rather than an isolated store problem.
+- At an estimated handling cost of Rp50,000 per return, these returns generated **Rp284.05 million** in logistics overhead (excluding lost gross profit)[cite: 4].
+
+---
+
+## 💡 Strategic Recommendations
+1. **Branch & ASP Recovery:** Implement targeted upselling and value-added bundling for AC and TV lines at **Sun Plaza** and **Mall of Indonesia** to restore ASP (+5%–8%).
+2. **Pre-Delivery QC & Return Control:** Enforce mandatory pre-shipment quality inspections for AC, TV, Refrigerator, and Microwave units to reduce return rates from ~10% to **<6%**.
+3. **Top-Buyer Win-Back Campaign:** Launch personalized category-based reactivation offers with QRIS/Bank Transfer cashback incentives targeting 2024 high-frequency buyers whose activity dropped in 2025.
+4. **Promotion Calendar Rationalization:** Phase out low-margin seasonal discounts and reallocate budget toward **Product + Installation Bundling**, which preserves GPM above **31%**.
+
+---
+
+## 🖥️ Power BI Dashboard Preview
+The interactive dashboard is structured into 3 analytical views:
+1. **Overview:** Executive KPI scorecards, monthly revenue & transaction trends vs. Last Year, subcategory contribution, and branch target achievement[cite: 1].
+2. **Product & Toko:** Regional revenue breakdown, Gross Profit Margin %, average ticket size, and SKU-level drill-down tables[cite: 2].
+3. **Pelanggan:** Retention metrics across 521 customers, segment & age-group revenue distribution, payment method preferences, promo effectiveness, and return ratios[cite: 3].
+
+---
+
+## 🔗 Project Resources & Contact
+- 📊 **Power BI Dashboard (.pbix & PDF Export):** [Link to Google Drive / GitHub Folder]
+- 🎥 **Interactive Dashboard Walkthrough (Video):** [Link to Video Demo]
+- 💻 **SQL Diagnostic Queries:** [`elektromax_analysis.sql`](./elektromax_analysis.sql)
+- 📑 **Presentation Slide Deck (PDF):** [Link to Presentation Deck]
+- 💼 **LinkedIn:** [Your LinkedIn Profile URL]
+
+```
