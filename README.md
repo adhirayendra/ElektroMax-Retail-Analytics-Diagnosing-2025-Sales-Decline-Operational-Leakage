@@ -39,7 +39,7 @@ Analisis dilakukan pada skema *star-schema* yang terdiri dari:
 ### 1. Disparitas YoY Antar Cabang & Fenomena *Downtrading*
 - **6 dari 10 cabang** mengalami penurunan omzet pada 2025 dengan rentang pertumbuhan antara **+4,57%** (*Pondok Indah Mall*) hingga **-12,38%** (*Sun Plaza*).
 - Penurunan terdalam terjadi pada dua penopang omzet terbesar 2024: **ElektroMax Sun Plaza (-12,38%)** dan **ElektroMax Mall of Indonesia (-9,05%)**.
-- Kontraksi tidak disebabkan oleh sepinya jumlah pembeli, melainkan kombinasi **pergeseran ke produk berharga katalog lebih murah (*downtrading*)**—seperti *ASP* Televisi di Sun Plaza turun **11,6%** (Rp7,20 jt → Rp6,36 jt) dan Kulkas di MOI turun **8,7%** (Rp4,04 jt → Rp3,68 jt)—serta penurunan volume unit pada **AC Sun Plaza (-18,0%)** dan **Mesin Cuci MOI (-17,3%)**.
+- Kontraksi tidak disebabkan oleh sepinya jumlah pembeli, melainkan kombinasi **pergeseran ke produk berharga katalog lebih murah (*downtrading*)** seperti *ASP* Televisi di Sun Plaza turun **11,6%** (Rp7,20 jt → Rp6,36 jt) dan Kulkas di MOI turun **8,7%** (Rp4,04 jt → Rp3,68 jt) serta penurunan volume unit pada **AC Sun Plaza (-18,0%)** dan **Mesin Cuci MOI (-17,3%)**.
 
 ### 2. Dominasi Penjualan Organik & Inflasi Diskon
 - Sebanyak **67,20% omzet (Rp195,36 miliar)** berasal dari transaksi organik **Tanpa Promosi**.
