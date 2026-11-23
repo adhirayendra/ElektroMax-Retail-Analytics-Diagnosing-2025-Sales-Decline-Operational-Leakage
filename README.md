@@ -74,6 +74,6 @@ Dashboard interaktif terdiri dari 3 halaman utama:
 ---
 
 ## 🔗 Project Links & Contact
-- 📊 **Interactive Power BI Dashboard:** https://drive.google.com/file/d/1dZjKnMt7dEGM-bqmmJM7fXqmiJSHD2YE/view?usp=drive_link
-- 📑 **Presentation Slide Deck (PDF):** https://docs.google.com/presentation/d/1VPVxbO5smbBe1rSYQORo6wimDtkMWPfJ/edit?usp=sharing&ouid=113963515543284728138&rtpof=true&sd=true
-- 💼 **LinkedIn:** linkedin.com/in/adhirayendra/
+- 📊 **Interactive Power BI Dashboard:** [klik disini](https://drive.google.com/file/d/1dZjKnMt7dEGM-bqmmJM7fXqmiJSHD2YE/view?usp=drive_link)
+- 📑 **Presentation Slide Deck (PDF):** [klik disini](https://docs.google.com/presentation/d/1VPVxbO5smbBe1rSYQORo6wimDtkMWPfJ/edit?usp=sharing&ouid=113963515543284728138&rtpof=true&sd=true)
+- 💼 **LinkedIn:** [klik disini](linkedin.com/in/adhirayendra/)
